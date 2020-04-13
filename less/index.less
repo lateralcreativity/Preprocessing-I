@@ -170,7 +170,6 @@ h2,
 h3,
 h4 {
   font-family: @header-font;
-  font-size: 10rem;
 }
 
 header {
@@ -208,6 +207,7 @@ header {
 
     h1 {
       margin-bottom: 5%;
+      font-size: 10rem;
     }
 
     p {
@@ -224,5 +224,28 @@ header {
         background-color: black;
       }
     }
+  } // intro text ends
+} //intro ends
+
+.skills {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  div:nth-child(1) {
+    width: 50%;
+    p {
+      padding: 2% 0;
+      width: 80%;
+    }
+  }
+  div:nth-child(2) {
+    width: 40%;
+    li {
+      padding: 2% 0;
+    }
+  }
+
+  h2 {
+    font-size: 5rem;
   }
 }
