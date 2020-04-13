@@ -154,58 +154,58 @@ html {
 body {
   font-size: 1.6rem;
 }
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
 h1,
 h2,
 h3,
 h4 {
   font-family: "Roboto", sans-serif;
 }
-header {
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.container header {
   display: flex;
   justify-content: flex-end;
   margin: 2% 0 5% 0;
 }
-header nav {
+.container header nav {
   width: 30%;
   display: flex;
   justify-content: space-between;
 }
-header nav a {
+.container header nav a {
   color: black;
   text-decoration: none;
 }
-header nav a:hover {
+.container header nav a:hover {
   color: lightgray;
 }
-.intro {
+.container .intro {
   display: flex;
   align-items: flex-start;
   background-color: gainsboro;
   border-radius: 8px;
   padding: 3%;
 }
-.intro img {
+.container .intro img {
   border-radius: 8px;
   width: 35%;
 }
-.intro .intro-text {
+.container .intro .intro-text {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.intro .intro-text h1 {
+.container .intro .intro-text h1 {
   margin-bottom: 5%;
   font-size: 10rem;
 }
-.intro .intro-text p {
+.container .intro .intro-text p {
   padding: 2% 15%;
 }
-.intro .intro-text a {
+.container .intro .intro-text a {
   padding: 3%;
   margin-top: 2%;
   background-color: gray;
@@ -213,30 +213,64 @@ header nav a:hover {
   color: black;
   text-decoration: none;
 }
-.intro .intro-text a:hover {
+.container .intro .intro-text a:hover {
   color: lightgray;
 }
-.intro .intro-text a:hover {
+.container .intro .intro-text a:hover {
   background-color: black;
 }
-.skills {
+.container .skills {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 2%;
 }
-.skills div:nth-child(1) {
+.container .skills div:nth-child(1) {
   width: 50%;
 }
-.skills div:nth-child(1) p {
+.container .skills div:nth-child(1) p {
   padding: 2% 0;
   width: 80%;
 }
-.skills div:nth-child(2) {
-  width: 40%;
-}
-.skills div:nth-child(2) li {
+.container .skills div:nth-child(2) li {
   padding: 2% 0;
 }
-.skills h2 {
+.container .skills h2 {
   font-size: 5rem;
+}
+.container .work-history {
+  margin: 5% 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.container .work-history h2 {
+  font-size: 5rem;
+  margin-bottom: 5%;
+}
+.container .work-history h3 {
+  margin: 3% 0;
+  font-size: 3rem;
+}
+.container #contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container #contact h2 {
+  font-size: 3rem;
+  margin: 1% 0;
+}
+.container #contact a {
+  color: black;
+  padding: 0.5% 0;
+}
+.container #contact a:hover {
+  color: lightgray;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 2% 0;
+  background-color: grey;
+  color: white;
 }

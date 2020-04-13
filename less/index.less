@@ -160,11 +160,6 @@ body {
   font-size: 1.6rem;
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
-
 h1,
 h2,
 h3,
@@ -172,80 +167,127 @@ h4 {
   font-family: @header-font;
 }
 
-header {
-  display: flex;
-  justify-content: flex-end;
-  margin: 2% 0 5% 0;
-  nav {
-    width: 30%;
+.container {
+  width: 80%;
+  margin: 0 auto;
+
+  header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    margin: 2% 0 5% 0;
+    nav {
+      width: 30%;
+      display: flex;
+      justify-content: space-between;
 
-    a {
-      .link-style();
+      a {
+        .link-style();
+      }
     }
-  }
-}
+  }//header ends
 
-.intro {
-  display: flex;
-  align-items: flex-start;
-  background-color: gainsboro;
-  border-radius: 8px;
-  padding: 3%;
-
-  img {
+  .intro {
+    display: flex;
+    align-items: flex-start;
+    background-color: gainsboro;
     border-radius: 8px;
-    width: 35%;
-  }
+    padding: 3%;
 
-  .intro-text {
-    width: 100%;
+    img {
+      border-radius: 8px;
+      width: 35%;
+    }
+
+    .intro-text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h1 {
+        margin-bottom: 5%;
+        font-size: 10rem;
+      }
+
+      p {
+        padding: 2% 15%;
+      }
+
+      a {
+        padding: 3%;
+        margin-top: 2%;
+        background-color: gray;
+        border-radius: 8px;
+        .link-style();
+        &:hover {
+          background-color: black;
+        }
+      }
+    } // intro text ends
+  } //intro ends
+
+  .skills {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+    div:nth-child(1) {
+      width: 50%;
+      p {
+        padding: 2% 0;
+        width: 80%;
+      }
+    }
+    div:nth-child(2) {
+      li {
+        padding: 2% 0;
+      }
+    }
+
+    h2 {
+      font-size: 5rem;
+    }
+  } //skills ends
+
+  .work-history {
+    margin: 5% 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    h2 {
+      font-size: 5rem;
+      margin-bottom: 5%;
+    }
+
+    h3 {
+      margin: 3% 0;
+      font-size: 3rem;
+    }
+  } //work-history ends
+
+  #contact {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    h1 {
-      margin-bottom: 5%;
-      font-size: 10rem;
-    }
-
-    p {
-      padding: 2% 15%;
+    h2 {
+      font-size: 3rem;
+      margin: 1% 0;
     }
 
     a {
-      padding: 3%;
-      margin-top: 2%;
-      background-color: gray;
-      border-radius: 8px;
-      .link-style();
+      color: black;
+      padding: 0.5% 0;
       &:hover {
-        background-color: black;
+        color: lightgray;
       }
     }
-  } // intro text ends
-} //intro ends
-
-.skills {
+  }// contact ends
+} // container ends
+footer {
   display: flex;
   justify-content: center;
-  margin-top: 2%;
-  div:nth-child(1) {
-    width: 50%;
-    p {
-      padding: 2% 0;
-      width: 80%;
-    }
-  }
-  div:nth-child(2) {
-    width: 40%;
-    li {
-      padding: 2% 0;
-    }
-  }
-
-  h2 {
-    font-size: 5rem;
-  }
+  padding: 2% 0;
+  background-color: grey;
+  color: white;
 }
