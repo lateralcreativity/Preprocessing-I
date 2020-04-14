@@ -178,8 +178,12 @@ h4 {
   font-family: @header-font;
 }
 
-hr {
+hr, h1, p, a, .skills, .work-history, #contact, footer{
 	.fade-in(5s);
+}
+
+header, nav a, img{
+	.fade-in(2s);
 }
 
 .container {
@@ -190,7 +194,6 @@ hr {
   margin: 0 auto;
 
   header {
-	.fade-in(2s);
     display: flex;
     justify-content: flex-end;
     margin: 2% 0 5% 0;
@@ -226,7 +229,6 @@ hr {
         width: 60%;
         margin-bottom: 2%;
 	  }
-	  .fade-in(2s);
       border-radius: 8px;
       width: 35%;
     }
@@ -241,18 +243,15 @@ hr {
         @media (max-width: 500px) {
           font-size: 5rem;
 		}
-		.fade-in(5s);
         margin-bottom: 5%;
         font-size: 10rem;
       }
 
       p {
-		.fade-in(5s);
         padding: 2% 15%;
       }
 
       a {
-		.fade-in(5s);
         padding: 3%;
         margin-top: 2%;
         background-color: gray;
@@ -266,7 +265,6 @@ hr {
   } //intro ends
 
   .skills {
-	.fade-in(5s);
     @media (max-width: 500px) {
       flex-direction: column;
       align-items: center;
@@ -306,7 +304,6 @@ hr {
   } //skills ends
 
   .work-history {
-	.fade-in(5s);
     margin: 5% 0;
     display: flex;
     justify-content: center;
@@ -324,7 +321,6 @@ hr {
   } //work-history ends
 
   #contact {
-	.fade-in(5s);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -344,7 +340,6 @@ hr {
   } // contact ends
 } // container ends
 footer {
-	.fade-in(5s);
   display: flex;
   justify-content: center;
   padding: 2% 0;
