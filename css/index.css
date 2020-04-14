@@ -139,6 +139,14 @@ table {
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/robotoslab/v11/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISWaA.ttf) format('truetype');
 }
+@keyframes fade-in {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
@@ -160,6 +168,10 @@ h3,
 h4 {
   font-family: "Roboto", sans-serif;
 }
+hr {
+  animation-name: fade-in;
+  animation-duration: 5s;
+}
 .container {
   width: 80%;
   margin: 0 auto;
@@ -170,6 +182,8 @@ h4 {
   }
 }
 .container header {
+  animation-name: fade-in;
+  animation-duration: 2s;
   display: flex;
   justify-content: flex-end;
   margin: 2% 0 5% 0;
@@ -207,6 +221,8 @@ h4 {
   }
 }
 .container .intro img {
+  animation-name: fade-in;
+  animation-duration: 2s;
   border-radius: 8px;
   width: 35%;
 }
@@ -223,6 +239,8 @@ h4 {
   align-items: center;
 }
 .container .intro .intro-text h1 {
+  animation-name: fade-in;
+  animation-duration: 5s;
   margin-bottom: 5%;
   font-size: 10rem;
 }
@@ -232,9 +250,13 @@ h4 {
   }
 }
 .container .intro .intro-text p {
+  animation-name: fade-in;
+  animation-duration: 5s;
   padding: 2% 15%;
 }
 .container .intro .intro-text a {
+  animation-name: fade-in;
+  animation-duration: 5s;
   padding: 3%;
   margin-top: 2%;
   background-color: gray;
@@ -249,6 +271,8 @@ h4 {
   background-color: black;
 }
 .container .skills {
+  animation-name: fade-in;
+  animation-duration: 5s;
   display: flex;
   justify-content: space-around;
   margin-top: 2%;
@@ -288,6 +312,8 @@ h4 {
   font-size: 5rem;
 }
 .container .work-history {
+  animation-name: fade-in;
+  animation-duration: 5s;
   margin: 5% 0;
   display: flex;
   justify-content: center;
@@ -302,6 +328,8 @@ h4 {
   font-size: 3rem;
 }
 .container #contact {
+  animation-name: fade-in;
+  animation-duration: 5s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -318,6 +346,8 @@ h4 {
   color: lightgray;
 }
 footer {
+  animation-name: fade-in;
+  animation-duration: 5s;
   display: flex;
   justify-content: center;
   padding: 2% 0;
