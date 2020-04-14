@@ -4,56 +4,353 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  // border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap");
+@header-font: "Roboto", sans-serif;
+@body-font: "Roboto Slab", serif;
+@mobile: ~"(max-width: 500px)";
+.link-style() {
+  color: black;
+  text-decoration: none;
+  &:hover {
+    color: lightgray;
+  }
+}
+.debug-border() {
+  border: 1px solid red;
+}
+.flex-layout(@justify, @align, @direction) {
+  display: flex;
+  justify-content: @justify;
+  align-items: @align;
+  flex-direction: @direction;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+.fade-in(@duration) {
+  animation-name: fade-in;
+  animation-duration: @duration;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  //   .debug-border();
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
+  font-family: @body-font;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: @header-font;
+}
+
+hr,
+h1,
+p,
+a,
+.skills,
+.work-history,
+#contact,
+footer {
+  .fade-in(5s);
+}
+
+header,
+nav a,
+img {
+  .fade-in(2s);
+}
+
+.container {
+  @media @mobile {
+    width: 100%;
+  }
+  width: 80%;
+  margin: 0 auto;
+
+  header {
+    .flex-layout(flex-end,"","");
+    margin: 2% 0 5% 0;
+    nav {
+      @media @mobile {
+        width: 100%;
+        .flex-layout(space-around,"","");
+      }
+      width: 30%;
+      .flex-layout(space-between,"","");
+
+      a {
+        .link-style();
+      }
+    }
+  } //header ends
+
+  .intro {
+    @media @mobile {
+      .flex-layout("",center,column);
+      border-radius: 0px;
+    }
+    .flex-layout("",flex-start,"");
+    background-color: gainsboro;
+    border-radius: 8px;
+    padding: 3%;
+
+    img {
+      @media @mobile {
+        width: 60%;
+        margin-bottom: 2%;
+      }
+      border-radius: 8px;
+      width: 35%;
+    }
+
+    .intro-text {
+      width: 100%;
+      .flex-layout("",center,column);
+
+      h1 {
+        @media @mobile {
+          font-size: 5rem;
+        }
+        margin-bottom: 5%;
+        font-size: 10rem;
+      }
+
+      p {
+        padding: 2% 15%;
+      }
+
+      a {
+        padding: 3%;
+        margin-top: 2%;
+        background-color: gray;
+        border-radius: 8px;
+        .link-style();
+        &:hover {
+          background-color: black;
+        }
+      }
+    } // intro text ends
+  } //intro ends
+
+  .skills {
+    @media @mobile {
+      .flex-layout("",center,column);
+    }
+
+    .flex-layout(space-around,"","");
+    margin-top: 2%;
+
+    h2 {
+      font-size: 5rem;
+    }
+
+    div:nth-child(1) {
+      @media @mobile {
+        .flex-layout("",center,column);
+        width: 100%;
+      }
+      width: 50%;
+      p {
+        padding: 2% 0;
+        width: 80%;
+      }
+    } //div1
+
+    div:nth-child(2) {
+      @media @mobile {
+        ul {
+          .flex-layout("",center,column);
+        }
+      }
+      li {
+        padding: 2% 0;
+      }
+    } //div2
+  } //skills ends
+
+  .work-history {
+    margin: 5% 0;
+    .flex-layout(center,"","");
+    text-align: center;
+
+    h2 {
+      font-size: 5rem;
+      margin-bottom: 5%;
+    }
+
+    h3 {
+      margin: 3% 0;
+      font-size: 3rem;
+    }
+  } //work-history ends
+
+  #contact {
+    .flex-layout("",center,column);
+    margin-bottom: 1%;
+
+    h2 {
+      font-size: 3rem;
+      margin: 1% 0;
+    }
+
+    a {
+      color: black;
+      padding: 0.5% 0;
+      &:hover {
+        color: lightgray;
+      }
+    }
+  } // contact ends
+} // container ends
+footer {
+  .flex-layout(center,"","");
+  padding: 2% 0;
+  background-color: grey;
+  color: white;
+}

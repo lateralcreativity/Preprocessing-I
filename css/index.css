@@ -1,1 +1,375 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v11/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISWaA.ttf) format('truetype');
+}
+@keyframes fade-in {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-family: "Roboto Slab", serif;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto", sans-serif;
+}
+hr,
+h1,
+p,
+a,
+.skills,
+.work-history,
+#contact,
+footer {
+  animation-name: fade-in;
+  animation-duration: 5s;
+}
+header,
+nav a,
+img {
+  animation-name: fade-in;
+  animation-duration: 2s;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+}
+.container header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: "";
+  flex-direction: "";
+  margin: 2% 0 5% 0;
+}
+.container header nav {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: "";
+  flex-direction: "";
+}
+@media (max-width: 500px) {
+  .container header nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: "";
+    flex-direction: "";
+  }
+}
+.container header nav a {
+  color: black;
+  text-decoration: none;
+}
+.container header nav a:hover {
+  color: lightgray;
+}
+.container .intro {
+  display: flex;
+  justify-content: "";
+  align-items: flex-start;
+  flex-direction: "";
+  background-color: gainsboro;
+  border-radius: 8px;
+  padding: 3%;
+}
+@media (max-width: 500px) {
+  .container .intro {
+    display: flex;
+    justify-content: "";
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0px;
+  }
+}
+.container .intro img {
+  border-radius: 8px;
+  width: 35%;
+}
+@media (max-width: 500px) {
+  .container .intro img {
+    width: 60%;
+    margin-bottom: 2%;
+  }
+}
+.container .intro .intro-text {
+  width: 100%;
+  display: flex;
+  justify-content: "";
+  align-items: center;
+  flex-direction: column;
+}
+.container .intro .intro-text h1 {
+  margin-bottom: 5%;
+  font-size: 10rem;
+}
+@media (max-width: 500px) {
+  .container .intro .intro-text h1 {
+    font-size: 5rem;
+  }
+}
+.container .intro .intro-text p {
+  padding: 2% 15%;
+}
+.container .intro .intro-text a {
+  padding: 3%;
+  margin-top: 2%;
+  background-color: gray;
+  border-radius: 8px;
+  color: black;
+  text-decoration: none;
+}
+.container .intro .intro-text a:hover {
+  color: lightgray;
+}
+.container .intro .intro-text a:hover {
+  background-color: black;
+}
+.container .skills {
+  display: flex;
+  justify-content: space-around;
+  align-items: "";
+  flex-direction: "";
+  margin-top: 2%;
+}
+@media (max-width: 500px) {
+  .container .skills {
+    display: flex;
+    justify-content: "";
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.container .skills h2 {
+  font-size: 5rem;
+}
+.container .skills div:nth-child(1) {
+  width: 50%;
+}
+@media (max-width: 500px) {
+  .container .skills div:nth-child(1) {
+    display: flex;
+    justify-content: "";
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.container .skills div:nth-child(1) p {
+  padding: 2% 0;
+  width: 80%;
+}
+@media (max-width: 500px) {
+  .container .skills div:nth-child(2) ul {
+    display: flex;
+    justify-content: "";
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.container .skills div:nth-child(2) li {
+  padding: 2% 0;
+}
+.container .work-history {
+  margin: 5% 0;
+  display: flex;
+  justify-content: center;
+  align-items: "";
+  flex-direction: "";
+  text-align: center;
+}
+.container .work-history h2 {
+  font-size: 5rem;
+  margin-bottom: 5%;
+}
+.container .work-history h3 {
+  margin: 3% 0;
+  font-size: 3rem;
+}
+.container #contact {
+  display: flex;
+  justify-content: "";
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1%;
+}
+.container #contact h2 {
+  font-size: 3rem;
+  margin: 1% 0;
+}
+.container #contact a {
+  color: black;
+  padding: 0.5% 0;
+}
+.container #contact a:hover {
+  color: lightgray;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: "";
+  flex-direction: "";
+  padding: 2% 0;
+  background-color: grey;
+  color: white;
+}
