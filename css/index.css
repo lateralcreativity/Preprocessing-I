@@ -197,17 +197,24 @@ img {
 .container header {
   display: flex;
   justify-content: flex-end;
+  align-items: "";
+  flex-direction: "";
   margin: 2% 0 5% 0;
 }
 .container header nav {
   width: 30%;
   display: flex;
   justify-content: space-between;
+  align-items: "";
+  flex-direction: "";
 }
 @media (max-width: 500px) {
   .container header nav {
     width: 100%;
+    display: flex;
     justify-content: space-around;
+    align-items: "";
+    flex-direction: "";
   }
 }
 .container header nav a {
@@ -219,15 +226,19 @@ img {
 }
 .container .intro {
   display: flex;
+  justify-content: "";
   align-items: flex-start;
+  flex-direction: "";
   background-color: gainsboro;
   border-radius: 8px;
   padding: 3%;
 }
 @media (max-width: 500px) {
   .container .intro {
-    flex-direction: column;
+    display: flex;
+    justify-content: "";
     align-items: center;
+    flex-direction: column;
     border-radius: 0px;
   }
 }
@@ -244,8 +255,9 @@ img {
 .container .intro .intro-text {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: "";
   align-items: center;
+  flex-direction: column;
 }
 .container .intro .intro-text h1 {
   margin-bottom: 5%;
@@ -276,13 +288,20 @@ img {
 .container .skills {
   display: flex;
   justify-content: space-around;
+  align-items: "";
+  flex-direction: "";
   margin-top: 2%;
 }
 @media (max-width: 500px) {
   .container .skills {
-    flex-direction: column;
+    display: flex;
+    justify-content: "";
     align-items: center;
+    flex-direction: column;
   }
+}
+.container .skills h2 {
+  font-size: 5rem;
 }
 .container .skills div:nth-child(1) {
   width: 50%;
@@ -290,8 +309,9 @@ img {
 @media (max-width: 500px) {
   .container .skills div:nth-child(1) {
     display: flex;
-    flex-direction: column;
+    justify-content: "";
     align-items: center;
+    flex-direction: column;
     width: 100%;
   }
 }
@@ -302,20 +322,20 @@ img {
 @media (max-width: 500px) {
   .container .skills div:nth-child(2) ul {
     display: flex;
-    flex-direction: column;
+    justify-content: "";
     align-items: center;
+    flex-direction: column;
   }
 }
 .container .skills div:nth-child(2) li {
   padding: 2% 0;
 }
-.container .skills h2 {
-  font-size: 5rem;
-}
 .container .work-history {
   margin: 5% 0;
   display: flex;
   justify-content: center;
+  align-items: "";
+  flex-direction: "";
   text-align: center;
 }
 .container .work-history h2 {
@@ -328,8 +348,10 @@ img {
 }
 .container #contact {
   display: flex;
-  flex-direction: column;
+  justify-content: "";
   align-items: center;
+  flex-direction: column;
+  margin-bottom: 1%;
 }
 .container #contact h2 {
   font-size: 3rem;
@@ -345,6 +367,8 @@ img {
 footer {
   display: flex;
   justify-content: center;
+  align-items: "";
+  flex-direction: "";
   padding: 2% 0;
   background-color: grey;
   color: white;

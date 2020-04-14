@@ -132,6 +132,7 @@ table {
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap");
 @header-font: "Roboto", sans-serif;
 @body-font: "Roboto Slab", serif;
+@mobile: ~"(max-width: 500px)";
 .link-style() {
   color: black;
   text-decoration: none;
@@ -139,22 +140,32 @@ table {
     color: lightgray;
   }
 }
-.debug-border(){
-	border: 1px solid red;
+.debug-border() {
+  border: 1px solid red;
+}
+.flex-layout(@justify, @align, @direction) {
+  display: flex;
+  justify-content: @justify;
+  align-items: @align;
+  flex-direction: @direction;
 }
 @keyframes fade-in {
-	from {opacity: 0%;}
-	to {opacity: 100%;}
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
-.fade-in(@duration){
-	animation-name: fade-in;
-	animation-duration: @duration;
+.fade-in(@duration) {
+  animation-name: fade-in;
+  animation-duration: @duration;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
-//   .debug-border();
+  //   .debug-border();
 }
 
 html,
@@ -178,33 +189,40 @@ h4 {
   font-family: @header-font;
 }
 
-hr, h1, p, a, .skills, .work-history, #contact, footer{
-	.fade-in(5s);
+hr,
+h1,
+p,
+a,
+.skills,
+.work-history,
+#contact,
+footer {
+  .fade-in(5s);
 }
 
-header, nav a, img{
-	.fade-in(2s);
+header,
+nav a,
+img {
+  .fade-in(2s);
 }
 
 .container {
-  @media (max-width: 500px) {
+  @media @mobile {
     width: 100%;
   }
   width: 80%;
   margin: 0 auto;
 
   header {
-    display: flex;
-    justify-content: flex-end;
+    .flex-layout(flex-end,"","");
     margin: 2% 0 5% 0;
     nav {
-      @media (max-width: 500px) {
+      @media @mobile {
         width: 100%;
-        justify-content: space-around;
+        .flex-layout(space-around,"","");
       }
       width: 30%;
-      display: flex;
-      justify-content: space-between;
+      .flex-layout(space-between,"","");
 
       a {
         .link-style();
@@ -213,36 +231,32 @@ header, nav a, img{
   } //header ends
 
   .intro {
-    @media (max-width: 500px) {
-      flex-direction: column;
-	  align-items: center;
-	  border-radius: 0px;
+    @media @mobile {
+      .flex-layout("",center,column);
+      border-radius: 0px;
     }
-    display: flex;
-    align-items: flex-start;
+    .flex-layout("",flex-start,"");
     background-color: gainsboro;
     border-radius: 8px;
     padding: 3%;
 
     img {
-      @media (max-width: 500px) {
+      @media @mobile {
         width: 60%;
         margin-bottom: 2%;
-	  }
+      }
       border-radius: 8px;
       width: 35%;
     }
 
     .intro-text {
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      .flex-layout("",center,column);
 
       h1 {
-        @media (max-width: 500px) {
+        @media @mobile {
           font-size: 5rem;
-		}
+        }
         margin-bottom: 5%;
         font-size: 10rem;
       }
@@ -265,18 +279,20 @@ header, nav a, img{
   } //intro ends
 
   .skills {
-    @media (max-width: 500px) {
-      flex-direction: column;
-      align-items: center;
+    @media @mobile {
+      .flex-layout("",center,column);
     }
-    display: flex;
-    justify-content: space-around;
+
+    .flex-layout(space-around,"","");
     margin-top: 2%;
+
+    h2 {
+      font-size: 5rem;
+    }
+
     div:nth-child(1) {
-      @media (max-width: 500px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      @media @mobile {
+        .flex-layout("",center,column);
         width: 100%;
       }
       width: 50%;
@@ -284,29 +300,23 @@ header, nav a, img{
         padding: 2% 0;
         width: 80%;
       }
-    }
+    } //div1
+
     div:nth-child(2) {
-      @media (max-width: 500px) {
+      @media @mobile {
         ul {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+          .flex-layout("",center,column);
         }
       }
       li {
         padding: 2% 0;
       }
-    }
-
-    h2 {
-      font-size: 5rem;
-    }
+    } //div2
   } //skills ends
 
   .work-history {
     margin: 5% 0;
-    display: flex;
-    justify-content: center;
+    .flex-layout(center,"","");
     text-align: center;
 
     h2 {
@@ -321,9 +331,8 @@ header, nav a, img{
   } //work-history ends
 
   #contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .flex-layout("",center,column);
+    margin-bottom: 1%;
 
     h2 {
       font-size: 3rem;
@@ -340,8 +349,7 @@ header, nav a, img{
   } // contact ends
 } // container ends
 footer {
-  display: flex;
-  justify-content: center;
+  .flex-layout(center,"","");
   padding: 2% 0;
   background-color: grey;
   color: white;
